@@ -1,7 +1,7 @@
 // Configuration file for environment variables
-const CONFIG = {
-    WEB_LOGO: 'your logo example',
-    WEB_PROFILE_PHOTO: 'your profile photo example'
+window.env = {
+    WEB_LOGO: '$WEB_LOGO',
+    WEB_PROFILE_PHOTO: '$WEB_PROFILE_PHOTO'
 };
 
 // Function to load images from config
@@ -9,13 +9,13 @@ function loadConfigImages() {
     // Update favicon
     const favicon = document.querySelector('link[rel="icon"]');
     if (favicon) {
-        favicon.href = CONFIG.WEB_LOGO;
+        favicon.href = window.env.WEB_LOGO;
     }
     
     // Update profile photo in hero section
     const profileImg = document.querySelector('.image-placeholder img');
     if (profileImg) {
-        profileImg.src = CONFIG.WEB_PROFILE_PHOTO;
+        profileImg.src = window.env.WEB_PROFILE_PHOTO;
         profileImg.alt = 'Profile Photo';
     }
 }

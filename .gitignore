@@ -1,7 +1,5 @@
-config.js
 .zipignore
 README.md
-config.js
 images/*.png
 unused/
 .env

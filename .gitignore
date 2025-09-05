@@ -1,5 +1,5 @@
 .zipignore
 README.md
-images/*.png
 unused/
 .env
+.gitignore

@@ -550,6 +550,12 @@ body {
     border: 1px solid #414868;
 }
 
+.github-link {
+    color: #9aa5ce;
+    text-decoration: underline;
+    transition: color 0.3s ease;
+}
+
 .form-group {
     margin-bottom: 1.5rem;
 }

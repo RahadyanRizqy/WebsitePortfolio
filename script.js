@@ -325,3 +325,36 @@ activeStyle.textContent = `
     }
 `;
 document.head.appendChild(activeStyle);
+
+
+// title move
+const baseText = "Rahadyan Rizqy ・ Personal Website ・ ";
+let pos = 0;
+let lastTime = 0;
+const speed = 100;
+const pause = 2000;
+
+function smoothScroll(timestamp) {
+  if (!lastTime) lastTime = timestamp;
+
+  if (timestamp - lastTime > speed) {
+    document.title = baseText.slice(pos) + baseText.slice(0, pos);
+    pos++;
+
+    if (pos > baseText.length) {
+      pos = 0;
+      // stop dulu, tunggu 2 detik
+      setTimeout(() => {
+        requestAnimationFrame(smoothScroll);
+      }, pause);
+      lastTime = timestamp;
+      return;
+    }
+
+    lastTime = timestamp;
+  }
+
+  requestAnimationFrame(smoothScroll);
+}
+
+requestAnimationFrame(smoothScroll);

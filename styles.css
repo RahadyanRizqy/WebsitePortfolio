@@ -482,6 +482,14 @@ body {
     transition: color 0.3s ease;
 }
 
+.npm-icon {
+    width: 20px;
+    height: 20px;
+    margin-right: 5px;
+    color: #7aa2f7;
+    fill: currentColor;
+}
+
 .project-link:hover {
     color: #bb9af7;
 }
